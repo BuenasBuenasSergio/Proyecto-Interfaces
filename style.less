@@ -1,0 +1,210 @@
+@posY:-130px;
+
+
+//nabar
+.nabar {
+    list-style-type: none;
+    margin: -8px;
+    padding: auto;
+    overflow: hidden;
+    width: auto;
+    background-color: rgb(132, 233, 247);
+}
+
+.nabar li {
+    float: left;
+}
+
+.nabar li a, .nabar li span {
+    margin: 0;
+    display: block;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Verdana;
+    text-align: center;
+    padding: 16px 16px;
+    text-decoration: none;
+}
+
+
+.nabar li a:hover {
+    background-color: rgb(54, 225, 248);
+}
+
+@media screen and (max-width: 830px) {
+    ul.nabar,
+    ul.nabar li {
+        float: none
+    }
+}
+
+.dalton:checked ~ .nabar{
+    background:  rgb(228, 228, 105);
+}
+//index
+
+#panel{
+    margin: 5% auto auto auto;
+    width: 100%;
+    height: 100%;;
+    background-color: red;
+}
+
+#contenidos{
+    margin: auto;
+    
+}
+#contenidos tr td{
+    font-size:24px
+    
+}
+
+.animacion{
+    position: absolute; left: 0px; top: 0px;
+    margin: auto auto;
+}
+
+#spriteD{
+    margin: 5% auto;
+    width: 126px;
+    height: 126px;
+    background: url('Image/hollow.png') top left;
+    animation: idle .75s steps(8, end) infinite;
+
+    
+}
+
+#spriteI{
+    margin: 5% auto;
+    width: 126px;
+    height: 126px;
+    background: url('Image/hollow.png') top left;
+    transform: scaleX(-1);
+    animation: idle .75s steps(8, end) infinite;
+    
+}
+
+#spriteUP{
+    margin: 5% auto;
+    width: 126px;
+    height: 126px;
+    background: url('Image/hollow.png')  -0px  (@posY * 5)+10px;
+    
+}
+
+#spriteDW{
+    margin: 5% auto;
+    width: 126px;
+    height: 126px;
+    background: url('Image/hollow.png') -885px  (@posY * 5)+10px;
+
+    
+    
+}
+
+#spriteAndarD{
+    margin: 5% auto;
+    width: 126px;
+    height: 126px;
+    background: url('Image/hollow.png') top left;
+
+    animation: walk .75s steps(8, end) infinite;
+
+    
+}
+
+#spriteAndarI{
+    margin: 5% auto;
+    width: 126px;
+    height: 126px;
+    transform: scaleX(-1);
+    background: url('Image/hollow.png') top left;
+
+    animation: walk .75s steps(8, end) infinite;
+
+    
+}
+
+#spriteAndarUP{
+    margin: 5% auto;
+    width: 126px;
+    height: 126px;
+    background: url('Image/hollow.png') top left ;
+
+    animation: up .75s steps(6, end) infinite;
+}
+
+#spriteAndarDW{
+    margin: 5% auto;
+    width: 126px;
+    height: 126px;
+    background: url('Image/hollow.png') top left;
+
+    animation: down .75s steps(5, end) infinite;
+
+}
+
+
+
+@keyframes walk {
+
+    from {background-position:  -126px  (@posY * 0)}
+    to   {background-position: -1152px (@posY * 0)}
+}
+
+@keyframes idle {
+
+    from {background-position:  -0px  (@posY * 3)}
+    to   {background-position: -1024px (@posY * 3)}
+}
+
+@keyframes up {
+
+    from {background-position:  -0px  (@posY * 5)+10px}
+    to   {background-position: -759px (@posY * 5)+10px}
+}
+
+@keyframes down {
+
+    from {background-position:  -885px  (@posY * 5)+10px}
+    to   {background-position: -1518px (@posY * 5)+10px}
+}
+
+@keyframes lookUp {
+
+    from {background-position:  -885px  (@posY * 5)+10px}
+    to   {background-position: -1518px (@posY * 5)+10px}
+}
+
+@keyframes lookDW {
+
+    from {background-position:  -885px  (@posY * 5)+10px}
+    to   {background-position: -1518px (@posY * 5)+10px}
+}
+
+
+//formulario
+label{
+    font-weight: bold;
+}
+
+.card-header{
+    font-weight: bold;
+    background-color: rgb(132, 233, 247);
+}
+// .card-body{
+//     background-color: black;
+// }
+
+#ini{
+    color: blue
+}
+
+#ini:hover{
+    cursor: pointer;
+}
+
+#inicio{
+    display: none;
+}
